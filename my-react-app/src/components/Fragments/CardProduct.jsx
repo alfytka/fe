@@ -3,7 +3,7 @@ import Button from "../Elements/Button/Index"
 const CardProduct = (props) => {
   const { children } = props
   return (
-    <div className="w-full max-w-sm bg-gray-800 border border-gray-700 rounded-lg shadow m-2 flex flex-col justify-between">
+    <div className="w-full max-w-xs bg-gray-800 border border-gray-700 rounded-lg shadow m-2 flex flex-col justify-between">
       {children}
     </div>
   )
@@ -39,14 +39,14 @@ const Body = (props) => {
 }
 
 const Footer = (props) => {
-  const { price } = props
+  const { price, handleAddToCart, id } = props
   return (
     <div className="flex items-center justify-between px-5 pb-5">
       <span className="text-3xl font-bold text-white">
         Rp{" "}
         {price.toLocaleString('id-ID', { styles: 'currency', currency: 'IDR'})}
       </span>
-      <Button classname="bg-blue-600">Add To Cart</Button>
+      <Button classname="bg-blue-600" onClick={() => handleAddToCart(id)}>Add To Cart</Button>
     </div>
   )
 }

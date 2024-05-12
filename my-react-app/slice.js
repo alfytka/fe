@@ -19,7 +19,7 @@ const store = configureStore({
 console.log("oncreate store : ", store.getState())
 
 store.subscribe(() => {
-  console.log("STORE ONCHAGE : ", store.getState())
+  console.log("STORE ONCHANGE : ", store.getState())
 })
 
 store.dispatch(cartSlice.actions.addToCart({ id: 1, qty: 20 }))

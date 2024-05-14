@@ -12,6 +12,7 @@ import { Provider } from 'react-redux'
 import store from './redux/store'
 import DarkModeContextProvider from './context/DarkMode'
 import { TotalPriceProvider } from './context/TotalPriceContext'
+import TestPage from './pages/test.jsx'
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
   {
     path: "/product/:id",
     element: <DetailProductPage />,
+  },
+  {
+    path: "/test",
+    element: <TestPage />,
   },
 ])
 
